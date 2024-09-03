@@ -11,3 +11,5 @@ for (var i of sentence) {
     reverse2 = i + reverse2;
 }
 console.log(reverse2);
+// third method and sortcut method
+console.log(sentence.split("").reverse().join(""));
