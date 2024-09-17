@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://kit.fontawesome.com/db4977b755.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customGray: "rgb(241, 241, 241)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- main content container -->
+      <div class="flex">
+        <!-- shape card container -->
+        <div class="flex-1">
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+              <img src="images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title justify-center">Triangle</h2>
+              <p class="flex justify-center items-center gap-1">
+                Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b
+                <i class="fa-solid fa-xmark"></i> h
+              </p>
+              <div class="flex gap-2 justify-center items-center">
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="TriangleBase"
+                  placeholder="b"
+                />
+                <span class="w-fit">cm</span>
+                <input class="w-24 text-black py-2 px-3 bg-customGray rounded" type="text" name="" id="TriangleHeight" placeholder="h" />
+                <span class="w-fit">cm</span>
+              </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary w-full" id="calculateBtn">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Area calculate container -->
+        <div class="w-96">
+          <h3 class="text-3xl">Area Calculation</h3>
+          <p id="calculateArea"></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="tailwind.config.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
