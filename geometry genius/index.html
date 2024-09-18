@@ -27,13 +27,15 @@
       };
     </script>
   </head>
-  <body>
+  <body class="py-3 px-2">
     <header></header>
     <main>
       <!-- main content container -->
       <div class="flex">
         <!-- shape card container -->
-        <div class="flex-1">
+        <div
+          class="flex-1 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-3"
+        >
           <div class="card bg-base-100 w-96 shadow-xl">
             <figure>
               <img src="images/triangle.png" alt="triangle" />
@@ -41,8 +43,8 @@
             <div class="card-body">
               <h2 class="card-title justify-center">Triangle</h2>
               <p class="flex justify-center items-center gap-1">
-                Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b
-                <i class="fa-solid fa-xmark"></i> h
+                Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> base
+                <i class="fa-solid fa-xmark"></i> height
               </p>
               <div class="flex gap-2 justify-center items-center">
                 <input
@@ -53,11 +55,92 @@
                   placeholder="b"
                 />
                 <span class="w-fit">cm</span>
-                <input class="w-24 text-black py-2 px-3 bg-customGray rounded" type="text" name="" id="TriangleHeight" placeholder="h" />
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="TriangleHeight"
+                  placeholder="h"
+                />
                 <span class="w-fit">cm</span>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary w-full" id="calculateBtn">Calculate</button>
+                <button
+                  class="btn btn-primary w-full"
+                  onclick="calculateTriangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+              <img src="images/rectangle.png" alt="rectangle" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title justify-center">rectangle</h2>
+              <p class="flex justify-center items-center gap-1">
+                Area (A) = weight
+                <i class="fa-solid fa-xmark"></i> length
+              </p>
+              <div class="flex gap-2 justify-center items-center">
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="rectangleWidth"
+                  placeholder="w"
+                />
+                <span class="w-fit">cm</span>
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="rectangleLength"
+                  placeholder="l"
+                />
+                <span class="w-fit">cm</span>
+              </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary w-full" onclick="calculateRectangleArea(getwidth(),getlength())">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+              <img src="images/parallelogram.png" alt="parallelogram" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title justify-center">Parallelogram</h2>
+              <p class="flex justify-center items-center gap-1">
+                Area (A) = base
+                <i class="fa-solid fa-xmark"></i> height
+              </p>
+              <div class="flex gap-2 justify-center items-center">
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="TriangleBase"
+                  placeholder="b"
+                />
+                <span class="w-fit">cm</span>
+                <input
+                  class="w-24 text-black py-2 px-3 bg-customGray rounded"
+                  type="text"
+                  name=""
+                  id="TriangleHeight"
+                  placeholder="h"
+                />
+                <span class="w-fit">cm</span>
+              </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary w-full" id="calculateBtn">
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
